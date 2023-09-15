@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <a href="#">
+                <img src="image/logo.png"  alt="Logo" />  
+            </a>
+        </div> 
+        
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="fa fa-home"></span>
+                        <span>Home</span>
+                    </a>"
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa fa-search"></span>
+                        <span>Search</span>
+                    </a>"
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa fas fa-book"></span>
+                        <span>Your Library</span>
+                    </a>"
+                </li>
+
+
+                <li>
+                    <a href="#">
+                        <span class="fa fas fa-plus-square"></span>
+                        <span>Create Playlist</span>
+                    </a>"
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="fa fas fa-heart"></span>
+                        <span>Liked Songs</span>
+                    </a>"
+                </li>
+            </ul>
+        </div>
+
+        <div class="policices">
+            <ul>
+                <li>
+                    <a href="#">Cookies</a>
+                </li>
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="topbar">
+            <div class="prev-next-buttons">
+                <button type="button" class="fa fas fa-chevron-left"></button>
+                <button type="button" class="fa fas fa-chevron-right"></button>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li>
+                        <a href="#">Premium</a>
+                    </li>
+                    <li>
+                        <a href="#">Support</a>
+                    </li>
+                    <li>
+                        <a href="#">Download</a>
+                    </li>
+                    <li class="divider"> | </li>
+                    <li>
+                        <a href="#">Sign Up</a>
+                    </li>
+                </ul>
+                <a href="LogInSpotify.html" id="LogIn">Log In</a>
+            </div>
+        </div>
+
+        <div class="spotify-songs">
+            <h2>Spotify Songs</h2>
+
+            <div class="list">
+                <div class="item play-button" data-id="1">
+                    <img src="image/ioto-map-of-the-universe.jpeg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>IOTO - Map Of The Universe</h4>
+                    <p>2022 · Singel</p>
+                </div>
+
+                <div class="item play-button" data-id="5">
+                    <img src="image/high-vibration.jpeg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>LSDream - HIGH VIBRATION</h4>
+                    <p>2021 · Album</p>
+                </div>
+
+                <div class="item play-button" data-id="6">
+                    <img src="image/rl-input-slope.jpeg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Resonant Language - Input Slope</h4>
+                    <p>2023 · EP</p>
+                </div>
+
+                <div class="item play-button" data-id="4">
+                    <img src="image/happy-man.jpg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Jungle - Happy Man</h4>
+                    <p>2018 · Album</p>
+                </div>
+
+                <div class="item play-button" data-id="3">
+                    <img src="image/rollo.jpeg" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>Ganja White Night - Rollo</h4>
+                    <p>2023 · Album</p>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <audio id="audioPlayer" controls="controls">
+            <source id="audioSource" src=""></source>
+            Your browser does not support the audio format.
+          </audio>
+
+        <div class="preview">
+            <div class="text">
+                <h6>Preview of Spotify</h6>
+                <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+            </div>
+            <div class="button">
+                <button type="button">Sign up free</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://kit.fontawesome.com/23cecef777.js"
+    crossorigin="anonymous">
+    </script>
+    <script src="SpotifyJS.js"></script>
+</body>
+</html>
