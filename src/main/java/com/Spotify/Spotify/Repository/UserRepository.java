@@ -20,9 +20,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     */
    List<User> findAllByUserName(String userName);
 
-    @RestResource(path = "userName")
-    List<User> findByNameContaining(String userName);
-
    @Query("select u from User u where lower(u.userName) like %:searchString%")
     List<User> searchByUserName(@Param("searchString") String searchString);
 

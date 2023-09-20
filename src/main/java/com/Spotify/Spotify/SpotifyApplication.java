@@ -1,6 +1,7 @@
 package com.Spotify.Spotify;
 
 import com.Spotify.Spotify.Model.Song;
+import com.Spotify.Spotify.Model.User;
 import com.Spotify.Spotify.Repository.SongRepository;
 import com.Spotify.Spotify.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

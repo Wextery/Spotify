@@ -41,21 +41,19 @@ public class UserRepositoryTests {
         assertThat(userList).isNotEmpty();
     }
 
-    /*
     @Test
-    void testCreateLUser() {
+    void testCreateUser() {
         long count = userRepository.count();
 
         User user = new User();
-        user.setUserName("Abraham Lincoln");
-        user.setEmailAddress("abrahamlincoln@gmail.com");
+        user.setUserName("New Person");
+        user.setEmailAddress("newperson@gmail.com");
         userRepository.save(user);
 
         long count2 = userRepository.count();
 
         assertThat(count2).isEqualTo(count + 1);
     }
-    */
 
     @Test
     void testDeleteUser() {

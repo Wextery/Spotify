@@ -21,28 +21,19 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public List<User> findByNameContaining(String name) {
-        return userRepository.findByNameContaining(name);
-    }
 
     public Optional<User> findUserById(Long id) {
         return userRepository.findById(id);
     }
 
-    public User registerUser (User user) {
-        if (user.getEmailAddress().isEmpty())
-            throw new IllegalArgumentException("Enter email address !");
-        if (user.getUserName().isEmpty())
-            throw new IllegalArgumentException("Enter user name !");
-        if (user.getPasswordHash().isEmpty())
-            throw new IllegalArgumentException("Enter password !");
-        if (user.getBirthDate().isEmpty())
-            throw new IllegalArgumentException("Enter birth date !");
+    public User createUser(User user) throws IllegalArgumentException {
+        if (user.getUserName() == null || user.getUserName().length() < 3)
+            throw new IllegalArgumentException("Name is too short");
+        if (user.getEmailAddress() == null || user.getEmailAddress().equals("") || !user.getEmailAddress().contains("@"))
+            throw new IllegalArgumentException("Email address is required.");
 
         return userRepository.save(user);
     }
-
-
 
 
     public void registerUser(UserDTO userDTO) {

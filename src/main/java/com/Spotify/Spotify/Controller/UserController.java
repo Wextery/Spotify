@@ -33,13 +33,14 @@ public class UserController {
     void deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);
     }
-    /*
+
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody UserDTO userDTO) {
         userService.registerUser(userDTO);
         return ResponseEntity.ok("User registered successfully");
     }
 
+    /*
     @PostMapping("/login")
     public ResponseEntity<String> loginUser(@RequestBody LoginDTO loginDTO) {
         String token = userService.loginUser(loginDTO);

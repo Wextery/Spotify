@@ -11,6 +11,9 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Set;
 
 @Getter
@@ -35,16 +38,16 @@ public class User {
     protected String passwordHash;
 
     @Column(name = "birth_date")
-    protected String birthDate;
+    protected Date birthDate;
 
     @Column(name = "gender")
     protected String gender;
 
     @Column(name = "created_at")
-    protected String createdAt;
+    protected Timestamp createdAt;
 
     @Column(name = "last_login")
-    protected String lastLogin;
+    protected Timestamp lastLogin;
 
     @Column(name = "profile_image")
     protected String profileImage;
