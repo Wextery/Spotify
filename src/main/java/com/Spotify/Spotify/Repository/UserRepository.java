@@ -10,17 +10,21 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
+
 @Repository
 @RepositoryRestResource(path="users")
 public interface UserRepository extends JpaRepository<User, Long> {
 
-   /* @Query("select u from User u where u.userId like %:searchLong%")
-    List<User> searchByUserId(@Param("searchLong") Long searchLong);
+    List<User> findAllByUserName(String userName);
 
-    */
-   List<User> findAllByUserName(String userName);
+    Optional<User> findByUserName(String userName);
 
-   @Query("select u from User u where lower(u.userName) like %:searchString%")
+    boolean existsByUserName(String username);
+
+    boolean existsByEmailAddress(String email);
+
+    @Query("select u from User u where lower(u.userName) like %:searchString%")
     List<User> searchByUserName(@Param("searchString") String searchString);
 
     @Query("select u from User u where lower(u.emailAddress) like %:searchString%")

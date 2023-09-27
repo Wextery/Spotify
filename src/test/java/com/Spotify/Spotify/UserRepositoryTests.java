@@ -10,6 +10,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
 
 import java.awt.print.Pageable;
 import java.util.List;
@@ -65,4 +69,6 @@ public class UserRepositoryTests {
 
         assertThat(count2).isEqualTo(count - 1);
     }
+
+
 }

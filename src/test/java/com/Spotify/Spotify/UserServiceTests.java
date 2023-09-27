@@ -27,4 +27,9 @@ public class UserServiceTests {
 
         assertThat(user.getUserId()).isNotNull();
     }
+
+    @Test
+    void testFindUserById() {
+
+    }
 }

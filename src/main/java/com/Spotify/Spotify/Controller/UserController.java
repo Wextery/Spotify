@@ -1,10 +1,13 @@
 package com.Spotify.Spotify.Controller;
 
+import com.Spotify.Spotify.Exception.UserAuthenticationException;
+import com.Spotify.Spotify.Exception.UserRegistrationException;
+import com.Spotify.Spotify.DTO.LoginDTO;
 import com.Spotify.Spotify.DTO.UserDTO;
-import com.Spotify.Spotify.Model.Song;
 import com.Spotify.Spotify.Model.User;
 import com.Spotify.Spotify.Repository.UserRepository;
 import com.Spotify.Spotify.Service.UserService;
+import com.Spotify.Spotify.Util.JwtUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -24,29 +27,43 @@ public class UserController {
     @Autowired
     protected UserService userService;
 
+    @Autowired
+    private JwtUtil jwtUtil;
+
     @GetMapping("/getAllUsers")
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
     @DeleteMapping("/deleteUser/{id}")
-    void deleteUser(@PathVariable Long id) {
+    public ResponseEntity<String> deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);
+        return ResponseEntity.ok("User deleted successfully.");
     }
 
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody UserDTO userDTO) {
-        userService.registerUser(userDTO);
-        return ResponseEntity.ok("User registered successfully");
+        try {
+            User registeredUser = userService.registerUser(userDTO);
+            return ResponseEntity.status(HttpStatus.CREATED).body("User registered successfully.");
+        } catch (UserRegistrationException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
     }
 
-    /*
+
     @PostMapping("/login")
-    public ResponseEntity<String> loginUser(@RequestBody LoginDTO loginDTO) {
-        String token = userService.loginUser(loginDTO);
-        if (token != null) {
+    public ResponseEntity<String> login(@RequestBody LoginDTO loginDTO) {
+        try {
+
+            User authenticatedUser = userService.loginUser(loginDTO);
+
+            String token = jwtUtil.generateToken(authenticatedUser.getUserName());
             return ResponseEntity.ok(token);
-        } else {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Authentication failed");
-        }*/
+        } catch (UserAuthenticationException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Authentication failed: Invalid username or password");
+        }
+    }
+
+
 }
