@@ -11,60 +11,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-        <div class="topbar">
-            <div class="logo">
-                <a href="MainSpotify.html">
-                    <img src="image/logo.png"  alt="Logo" />
-                </a>  
-            </div> 
-        </div>
-        <div class="login-container">
+    <div class="topbar">
+        <!-- ... (your topbar content) ... -->
+    </div>
+    <div class="login-container">
         <div class="login-window">
-
             <a>Log in to Spotify</a>
-
-            <ul>  
-                 <button type="button" id="google">Continue with Google</button> 
-                 <button type="button" id="facebook">Continue with Facebook</button>    
-                 <button type="button" id="apple">Continue with Apple</button>
-             </ul>
-        
+            <ul>
+                <button type="button" id="google">Continue with Google</button>
+                <button type="button" id="facebook">Continue with Facebook</button>
+                <button type="button" id="apple">Continue with Apple</button>
+            </ul>
             <hr class="line">
-
-        <div class="mail-password">
-            <form>
-                <p>Email or username</p>
-                <input type="email">
-                <p>Password</p>
-                <input type="password">
-            </form>
-        </div>
-
-        <div class="remember-me">
-            <input type="checkbox" id="rememberMeCheckbox" />
-            <a>Remember me</e>
-          </div>
-          
-        
-        <div class="final-login">
-            <button type="button">Log In</button>
-        </div>
-
-        <div class="forgot-password">
-            <a href="#">Forgot your password?</a>
-        </div>
-
-        <hr class="line">
-
-        <div class="create-account">
-            <p>Don't have an account?</p> 
-            <div class="register">
-                <a href="#">Sign up for Spotify</a>
+            <div class="mail-password">
+                <form>
+                    <p>Email or username</p>
+                    <input type="email" id="email" required>
+                    <p>Password</p>
+                    <input type="password" id="password" required>
+                </form>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="rememberMeCheckbox">
+                <a>Remember me</a>
+            </div>
+            <div class="final-login">
+                <button type="button" id="loginButton">Log In</button>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Forgot your password?</a>
+            </div>
+            <hr class="line">
+            <div class="create-account">
+                <p>Don't have an account?</p>
+                <div class="register">
+                    <a href="RegisterToSpotify.html">Sign up for Spotify</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 
     <script src="https://kit.fontawesome.com/23cecef777.js"
     crossorigin="anonymous">
