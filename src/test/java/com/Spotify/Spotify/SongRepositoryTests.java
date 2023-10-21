@@ -34,7 +34,7 @@ public class SongRepositoryTests {
         Song song = new Song();
         song.setSongName("Tranquil Echoes");
         song.setArtistName("Koush");
-        song.setDateRelease(new Date(2000,9,1));
+        //song.setDateRelease(new Date(2000,9,1));
         songRepository.save(song);
 
         long count2 = songRepository.count();
@@ -54,3 +54,4 @@ public class SongRepositoryTests {
     }
 
 }
+

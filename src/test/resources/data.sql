@@ -13,10 +13,10 @@
  	 (2,'Sindy Urbanovicova','sindy333@gmail.com',NULL,'2000-08-10',NULL,NULL,NULL,'Female'),
  	 (1,'Andrej Pernica','andrew123@gmail.com',NULL,'2000-05-04',NULL,NULL,NULL,'Male');
 
- INSERT INTO public.song (song_name,song_id,date_release,artist,release_type,duration,genre,file_path) VALUES
-     ('Map Of The Universe',1,'2022-01-01','IOTO','Single',NULL,'Ambient','/Users/andrew/Desktop/Spotify/SpotifyMusicStorage/IOTO - Map Of The Universe.mp3'),
-     ('Rollo',3,'2023-03-28','Ganja White Night','Album',NULL,'Electronic','/Users/andrew/Desktop/Spotify/SpotifyMusicStorage/Ganja White Night - Rollo.mp3'),
-     ('Happy Man',4,'2018-01-01','Jungle','Album',NULL,'Electronic','/Users/andrew/Desktop/Spotify/SpotifyMusicStorage/Jungle - Happy Man.mp3'),
-     ('HIGH VIBRATIONS',5,'2021-01-01','LSDream','Album',NULL,'Electronic','/Users/andrew/Desktop/Spotify/SpotifyMusicStorage/LSDream - HIGH VIBRATION.mp3'),
-     ('Input Slope',6,'2023-01-01','Resonant Language','EP',NULL,'Electronic','/Users/andrew/Desktop/Spotify/SpotifyMusicStorage/Resonant Language - Input Slope.mp3');
+ INSERT INTO public.song (song_name,date_release,artist,release_type,duration,genre,file_path) VALUES
+     ('Map Of The Universe','2022-01-01','IOTO','Single',NULL,'Ambient','/Users/andrew/Desktop/Spotify/SpotifyMusicStorage/IOTO - Map Of The Universe.mp3'),
+     ('Rollo','2023-03-28','Ganja White Night','Album',NULL,'Electronic','/Users/andrew/Desktop/Spotify/SpotifyMusicStorage/Ganja White Night - Rollo.mp3'),
+     ('Happy Man','2018-01-01','Jungle','Album',NULL,'Electronic','/Users/andrew/Desktop/Spotify/SpotifyMusicStorage/Jungle - Happy Man.mp3'),
+     ('HIGH VIBRATIONS','2021-01-01','LSDream','Album',NULL,'Electronic','/Users/andrew/Desktop/Spotify/SpotifyMusicStorage/LSDream - HIGH VIBRATION.mp3'),
+     ('Input Slope','2023-01-01','Resonant Language','EP',NULL,'Electronic','/Users/andrew/Desktop/Spotify/SpotifyMusicStorage/Resonant Language - Input Slope.mp3');
 
