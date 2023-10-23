@@ -8,7 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
+import java.util.Optional;
+
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
 @SpringBootTest
 @ActiveProfiles("test")
 public class UserServiceTests {
@@ -29,7 +33,18 @@ public class UserServiceTests {
     }
 
     @Test
-    void testFindUserById() {
+    void testFindUser() {
+        Optional<User> userOptional = userService.findUserById(100L);
 
+        assertThat(userOptional).isPresent();
+        assertThat(userOptional.get().getUserName()).isEqualTo("Andrej Pernica");
     }
+
+    @Test
+    void testFindUserNotFound() {
+        Optional<User> libraryOptional = userService.findUserById(200L);
+
+        assertThat(libraryOptional).isEmpty();
+    }
+
 }

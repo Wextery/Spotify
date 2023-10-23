@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogInSpotify</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="RegisterToSpotifyStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="logo">
+                <a href="MainSpotify.html">
+                    <img src="image/SpotifyLogoColor.png" alt="Logo" />
+                </a>
+            </div>
+        </div>
+        <div class="login-container">
+            <div class="login-window">
+    
+                <h2 style="font-weight: 700;">Register and start listening.</h2>
+                <h2 style="font-weight: 700;">For Free.</h2>
+    
+                <ul>
+                    <button class="facebook-button" style="font-weight: 500;">Register with Facebook</button>
+                    <button class="google-button" style="font-weight: 500;">Register with Google</button>
+                </ul>
+    
+                <hr class="line">
+
+                <h3 style="font-weight: 700;">Register using your e‑mail address</h3>
+    
+                <div class="mail-password">
+                    <form id="registrationForm">
+                        <p>What is your email address?</p>
+                        <input type="email" id="email" required><br><br>
+    
+                        <p>Create your password</p>
+                        <input type="password" id="password" required><br><br>
+    
+                        <p>How should we address you?</p>
+                        <input type="text" id="username" required><br><br>
+
+                        <p>What is your birth date?</p>
+
+                        <div class="date">
+                            <div class="month">
+                                <p class="item1">Month</p>
+                                 <select>
+                                    <option value="0">Month</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">Oktober</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+                                 <p class="item2">Day</p>
+                                    <input class="day" type="text" id="twoDigits" name="twoDigits" maxlength="2" required>
+                                    <!--<span>DD</span>-->
+                                 <p class="item3">Year</p>
+                                    <input class="year" type="text" id="fourDigits" name="fourDigits" maxlength="4" required>
+                                    <!--<span>YYYY</span>-->
+                        
+                        </div>
+
+                        
+                        <div class="gender-checkbox">
+
+                            <h4>What is your gender?</h4>
+
+                            <input type="checkbox" id="agreeCheckbox" />
+                            <label for="agreeCheckbox">Male</label>
+
+                            <input type="checkbox" id="agreeCheckbox" />
+                            <label for="agreeCheckbox">Female</label>
+
+                            <input type="checkbox" id="agreeCheckbox" />
+                            <label for="agreeCheckbox">Nonbinary</label>
+
+                            <input type="checkbox" id="agreeCheckbox" />
+                            <label for="agreeCheckbox">Other</label>
+
+                            <input type="checkbox" id="agreeCheckbox" />
+                            <label for="agreeCheckbox">I don't want to state</label>
+                        </div>
+
+                        <div class="agree-condition">
+                            <input type="checkbox" id="agreeCheckbox" />
+                            <label for="agreeCheckbox">Spotify may share my registration data with its content providers for marketing purposes.</label>
+                        </div>
+                        
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+    
+    
+                <div class="login-account">
+                    <p>Already have an account?</p>
+                    <div class="register">
+                        <a href="LogInSpotify.html">Log In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/23cecef777.js"
+    crossorigin="anonymous">
+    </script>
+    <script src="SpotifyJS.js"></script>
+
+    </body>
+    </html>
+    

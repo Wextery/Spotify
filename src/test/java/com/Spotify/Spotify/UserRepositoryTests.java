@@ -63,7 +63,7 @@ public class UserRepositoryTests {
     void testDeleteUser() {
         long count = userRepository.count();
 
-        userRepository.deleteById(2L);
+        userRepository.deleteById(102L);
 
         long count2 = userRepository.count();
 
