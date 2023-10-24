@@ -23,6 +23,8 @@ public class SongService {
     public Song createSong (Song song) {
         if (song.getSongName().isEmpty())
             throw new IllegalArgumentException("Enter the name of the song !");
+        if (song.getArtistName().isEmpty())
+            throw new IllegalArgumentException("Enter the name of Artist !");
 
         return songRepository.save(song);
     }
@@ -40,7 +42,7 @@ public class SongService {
         }
     }
 
-    private byte[] readAudioDataFromFile(String audioFilePath) throws IOException {
+    public byte[] readAudioDataFromFile(String audioFilePath) throws IOException {
 
         Path filePath = Path.of(audioFilePath);
         return Files.readAllBytes(filePath);
